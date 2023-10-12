@@ -1,0 +1,116 @@
+digraph {
+	node [shape=none]
+	start [fillcolor="#92ca38" fontsize=22 shape=ellipse style=filled]
+	end [fillcolor="#dc1e78" fontsize=22 shape=ellipse style=filled]
+	1 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">1</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">5: {<br align="left"/>
+6:     int x = 3;<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	2 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">2</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">7: do<br align="left"/>
+8:     {<br align="left"/>
+9:       x-=1;<br align="left"/>
+10:       cout&lt;&lt;&quot;12&quot;;<br align="left"/>
+11:       if(x==0)<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	3 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">3</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">12: cout&lt;&lt;&quot;end&quot;;<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	4 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">4</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">14: continue;<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	5 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">5</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">15: cout&lt;&lt;&quot;sth&quot;;<br align="left"/>
+16:     }while(x&gt;0)<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	6 [label=<
+<FONT POINT-SIZE="22">
+               <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+                    <tr>
+                         <td width="30" height="30" fixedsize="true">6</td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                         <td width="9" height="9" fixedsize="true" style="invis"></td>
+                    </tr>
+                    <tr>
+                         <td width="30" height="40" fixedsize="false" sides="tlb"></td>
+                         <td width="50" height="40" fixedsize="false" sides="bt">17: return 0;<br align="left"/>
+</td>
+                         <td width="30" height="40" fixedsize="false" sides="brt"></td>
+                    </tr>
+            </TABLE>
+            </FONT>>]
+	6 -> end
+	1 -> 2 [label=flow fontsize=22]
+	2 -> 3 [label=True fontsize=22]
+	2 -> 4 [label=False fontsize=22]
+	4 -> 2 [label=True fontsize=22]
+	3 -> 5 [label=flow fontsize=22]
+	5 -> 2 [label=True fontsize=22]
+	5 -> 6 [label=False fontsize=22]
+	start -> 1
+}
